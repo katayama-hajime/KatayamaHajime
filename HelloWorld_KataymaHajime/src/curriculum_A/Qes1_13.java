@@ -104,46 +104,28 @@ public class Qes1_13 {
 		boolean isAdult = age >= 25; // 25歳以上ならtrue
 		System.out.println(isAdult); // 結果を出力
 		// 問題⑪
-		naime = "鈴木一郎";
-		System.out.println("初めまして" + naime + "です");
-		String str1 = "身長は";
-		String str2 = "cmです";
-		String str3 = str1 + "168.5 " + str2;
-		System.out.println(str3);
-		String str4 = "体重は";
-		String str5 = "ｋｇです";
-		String str6 = str4 + "64.2 " + str5;
-		System.out.println(str6);
-		favoriteFood = "オムライス";
-		System.out.println("好きな食べ物は" + favoriteFood + "です");
-		bmi = weight / ((height / 100) * (height / 100));
-		// 変数beforeBmiを宣言し四捨五入する変数bmiを代入
-		beforeBmi = new BigDecimal(bmi);
-		// setScaleメソッドで小数第2位を四捨五入する
-		afterBmi = beforeBmi.setScale(2, RoundingMode.HALF_UP);
-		System.out.println("BMIは" + afterBmi + "です");
-		//　問題⑫
-		naime = "鈴木一郎";
-		System.out.println("初めまして" + naime + "です");
-		int age1 = 24;
-		float height1 = 168.5f;
-		weight = 64.2d;
-		favoriteFood = "オムライス";
-		System.out.println("年齢は " + age1 + "歳です");
-		System.out.println("身長は" + height1 + "cmです");
-		System.out.println("体重は" + weight + "kgです");
-		System.out.println("好きな食べ物は" + favoriteFood + "です");
-		bmi = weight / ((height / 100) * (height / 100));
-		// 変数beforeBmiを宣言し四捨五入する変数bmiを代入
-		beforeBmi = new BigDecimal(bmi);
-		// setScaleメソッドで小数第2位を四捨五入する
-		afterBmi = beforeBmi.setScale(1, RoundingMode.HALF_UP);
-		System.out.println("BMIは" + afterBmi + "です");
-		//　問題⑫
-		age = 25;         // 年齢をここで設定
-        height = 158;     // 身長をここで設定
+		age = 24;
+		height = 168.5f;
+		weight = 64.2;
 
-        boolean result = (age == 25 || height >= 160);
-        System.out.println(result);
+		String result = String.valueOf(age) + "歳・" + String.valueOf(height) + "cm・" + String.valueOf(weight) + "kg";
+		System.out.println(result);
+
+		//　問題⑫
+		age = 24;
+		height = 168.5f;
+
+		// 身長を整数に変換（小数点以下を切り捨て）
+		int heightInt = (int) height;
+
+		// 整数型で出力
+		System.out.println(age + "歳・" + heightInt);
+		//　問題⑬
+		age = 24;
+		height = 168.5f;
+
+		// 条件を直接評価して出力（if文なし）
+		boolean result1 = (age >= 25) || (height >= 160);
+		System.out.println(result1);
 	}
 }
