@@ -25,7 +25,7 @@ public class Qes1_13 {
 		f = 0.0f;
 		d5 = 0.0d;
 		c = '\u0000';
-		str = "";
+		str = null;
 		b1 = false;
 		// 問題③
 		b = 10;
@@ -41,15 +41,15 @@ public class Qes1_13 {
 		System.out.println(b + s + i + l0);
 		System.out.println(f + d5);
 		System.out.println(c + str + b1);
-		double sam = b + s + i + l0 + f + d5;
+		double sam = b + s + i + l0 + f + d5;//井上さん監修
 		System.out.println((int) sam);
 		System.out.println(b * s * i * l0);
 		System.out.println(d5 / s);
 		System.out.println(b - s);
 		// 問題⑤
-		String num = "4";
-		int num1 = 3;
-		System.out.println("ハローJAVA" + (num + num1));
+		int num1 = 20;
+		int num2 = 23;
+		System.out.println("ハローJAVA" + (num1 + num2));
 		// 問題⑥
 		String naime = "山田太郎";
 		int age = 18;
@@ -100,32 +100,30 @@ public class Qes1_13 {
 		afterBmi = beforeBmi.setScale(2, RoundingMode.HALF_UP);
 		System.out.println("BMIは" + afterBmi + "です");
 		//　問題⑩
-		age = 25; // 年齢を25に設定
+		age = 24; // 年齢を24に設定
 		boolean isAdult = age >= 25; // 25歳以上ならtrue
 		System.out.println(isAdult); // 結果を出力
 		// 問題⑪
 		age = 24;
 		height = 168.5f;
 		weight = 64.2;
-
-		String result = String.valueOf(age) + "歳・" + String.valueOf(height) + "cm・" + String.valueOf(weight) + "kg";
-		System.out.println(result);
+        
+		
+		String strAge = String.valueOf(age);
+		String strHei = String.valueOf(height);
+		String strWei = String.valueOf(weight);
+		System.out.println( strAge +  strHei + strWei );
 
 		//　問題⑫
-		age = 24;
-		height = 168.5f;
-
 		// 身長を整数に変換（小数点以下を切り捨て）
-		int heightInt = (int) height;
-
+		int ageInt = Integer.parseInt(strAge);
+		float floatValue = Float.parseFloat(strHei);
+		int heightInt = (int) floatValue; 
 		// 整数型で出力
-		System.out.println(age + "歳・" + heightInt);
+		System.out.println(ageInt + heightInt);
 		//　問題⑬
-		age = 24;
-		height = 168.5f;
-
 		// 条件を直接評価して出力（if文なし）
-		boolean result1 = (age >= 25) || (height >= 160);
+		boolean result1 = (ageInt >= 25) || (heightInt >= 160);
 		System.out.println(result1);
 	}
 }
