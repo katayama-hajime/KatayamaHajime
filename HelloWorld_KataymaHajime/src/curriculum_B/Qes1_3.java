@@ -21,9 +21,14 @@ public class Qes1_3 {
 			int count = 0;
 
 			while (true) {
+                System.out.println("[0,1,2]のいずれかを入力してください");
+				String strPlayer = scanner.nextLine(); // 自分の手
+				int player = Integer.parseInt(strPlayer);
+				if ( player < 0 || player > 2) {
+					System.out.println("指定された数値を入力してください");
+					continue;
+				}
 				count++;
-
-				int player = random.nextInt(3); // 自分の手
 				int opponent = random.nextInt(3); // 相手の手
 
 				System.out.println(text + "の手は「" + hands[player] + "」");
@@ -54,10 +59,11 @@ public class Qes1_3 {
 						System.out.println("たかがじゃんけん、そう思ってないですか？");
 						System.out.println("それやったら次も、俺が勝ちますよ\n");
 					}
-					System.out.println("じゃんけんを行った回数は " + count + " 回です");
-					System.out.println("勝つまでにかかった合計回数は " + count + " 回です");
+					
 				}
 			}
+			System.out.println("じゃんけんを行った回数は " + count + " 回です");
+			System.out.println("勝つまでにかかった合計回数は " + count + " 回です");
 		}
 		scanner.close();
 	}
