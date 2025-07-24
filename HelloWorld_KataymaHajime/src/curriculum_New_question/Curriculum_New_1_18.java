@@ -29,7 +29,7 @@ public class Curriculum_New_1_18 {
 
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 	private static void number1(int a, int b) {
-		int result = a + b;
+		int result = a * b;
 		System.out.println("乗算の結果" + result);
 	}
 
