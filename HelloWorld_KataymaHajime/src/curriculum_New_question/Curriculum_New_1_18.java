@@ -7,7 +7,7 @@ public class Curriculum_New_1_18 {
 	// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
 	public static void main(String[] args) {
 		text1("HelloJavaSE", 11);
-		int a = 1;
+		int a = 1;　
 		int b = 2;
 		number1(a, b);
 		int[] testnember1 = { 1, 2, 3, 4, 5, };
