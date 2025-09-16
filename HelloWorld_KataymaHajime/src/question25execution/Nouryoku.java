@@ -9,7 +9,6 @@ public class Nouryoku {
         Scanner scanner = new Scanner(System.in);
         System.out.print("名前を入力してください：");
         String userName = scanner.nextLine();
-
         Sabustetasu player = new Sabustetasu(); // コンストラクタで初期化
         System.out.println("こんにちは 「" + userName + "」 さん");
         System.out.println("ステータス");

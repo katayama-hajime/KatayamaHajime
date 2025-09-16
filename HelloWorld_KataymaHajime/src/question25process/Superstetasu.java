@@ -12,11 +12,10 @@ public class Superstetasu {
     public int getAttack() { return attack; }
     public int getSpeed() { return speed; }
     public int getDefense() { return defense; }
-
+    
     public void setHp(int hp) { this.hp = hp; }
     public void setMp(int mp) { this.mp = mp; }
     public void setAttack(int attack) { this.attack = attack; }
     public void setSpeed(int speed) { this.speed = speed; }
     public void setDefense(int defense) { this.defense = defense; }
-    
 } 
